@@ -5,6 +5,7 @@ import Pending from './pages/Pending'
 import Academie from './pages/Academie'
 import Users from './pages/Users'
 import Soon from './pages/Soon'
+import Social from './pages/Social'
 
 const modules = [
   { to: '/academie', label: 'Académie' },
@@ -41,7 +42,7 @@ export default function App() {
           <Route path="/academie" element={<Academie />} />
           <Route path="/reunions" element={<Soon title="Réunions en direct" text="Salles de visioconférence pour les cours et les rendez-vous." />} />
           <Route path="/boutique" element={<Soon title="Boutique" text="Produits numériques et paiement Orange Money / Moov Africa." />} />
-          <Route path="/social" element={<Soon title="Social et shorts" text="Fil d'actualité et vidéos courtes en format mobile." />} />
+          <Route path="/social" element={<Social />} />
           <Route path="/ia" element={<Soon title="Assistant IA" text="Aide à la création de cours et de contenus." />} />
           {profile.role === 'admin' && <Route path="/utilisateurs" element={<Users />} />}
           <Route path="*" element={<Navigate to="/" replace />} />
